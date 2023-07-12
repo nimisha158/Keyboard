@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <textarea id="box"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-12">
+              <button class="small-btn">Esc</button>
+              <button class="small-btn">F1</button>
+              <button class="small-btn">F2</button>
+              <button class="small-btn">F3</button>
+              <button class="small-btn">F4</button>
+              <button class="small-btn">F5</button>
+              <button class="small-btn">F6</button>
+              <button class="small-btn">F7</button>
+              <button class="small-btn">F8</button>
+              <button class="small-btn">F9</button>
+              <button class="small-btn">F10</button>
+              <button class="small-btn">F11</button>
+              <button class="small-btn">F12</button>
+              <button class="small-btn">PrtSc</button>
+              <button class="small-btn" onclick="del()">Delete</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="smaller-btn" onclick="method('`')">`</button>
+              <button class="big-btn" onclick="number(1)">1</button>
+              <button class="big-btn" onclick="number(2)">2</button>
+              <button class="big-btn" onclick="number(3)">3</button>
+              <button class="big-btn" onclick="number(4)">4</button>
+              <button class="big-btn" onclick="number(5)">5</button>
+              <button class="big-btn" onclick="number(6)">6</button>
+              <button class="big-btn" onclick="number(7)">7</button>
+              <button class="big-btn" onclick="number(8)">8</button>
+              <button class="big-btn" onclick="number(9)">9</button>
+              <button class="big-btn" onclick="number(0)">0</button>
+              <button class="big-btn" onclick="number('-')">-</button>
+              <button class="big-btn" onclick="res()" id="eq">=</button>
+              <button class="backspace-btn" onclick="backspace()">&#8592 Backspace</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="tab-btn" onclick="method('\t')">Tab &#8646</button>
+              <button class="big-btn" onclick="method('q')">Q</button>
+              <button class="big-btn" onclick="method('w')">W</button>
+              <button class="big-btn" onclick="method('e')">E</button>
+              <button class="big-btn" onclick="method('r')">R</button>
+              <button class="big-btn" onclick="method('t')">T</button>
+              <button class="big-btn" onclick="method('y')">Y</button>
+              <button class="big-btn" onclick="method('u')">U</button>
+              <button class="big-btn" onclick="method('i')">I</button>
+              <button class="big-btn" onclick="method('o')">O</button>
+              <button class="big-btn" onclick="method('p')">P</button>
+              <button class="big-btn" onclick="method('[')">[</button>
+              <button class="big-btn" onclick="method(']')">]</button>
+              <button class="big-btn" onclick="method()">\</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="capslock-btn" onclick="caps()">CapsLk</button>
+              <button class="big-btn" onclick="method('a')">A</button>
+              <button class="big-btn" onclick="method('s')">S</button>
+              <button class="big-btn" onclick="method('d')">D</button>
+              <button class="big-btn" onclick="method('f')">F</button>
+              <button class="big-btn" onclick="method('g')">G</button>
+              <button class="big-btn" onclick="method('h')">H</button>
+              <button class="big-btn" onclick="method('j')">J</button>
+              <button class="big-btn" onclick="method('k')">K</button>
+              <button class="big-btn" onclick="method('l')">L</button>
+              <button class="big-btn" onclick="method(';')">;</button>
+              <button class="big-btn" onclick="method()">'</button>
+              <button class="capslock-btn" onclick="method('\n')">&#8629 Enter</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="shift1-btn" onclick="shift1()">Shift &#8592</button>
+              <button class="big-btn" onclick="method('z')">Z</button>
+              <button class="big-btn" onclick="method('x')">X</button>
+              <button class="big-btn" onclick="method('c')">C</button>
+              <button class="big-btn" onclick="method('v')">V</button>
+              <button class="big-btn" onclick="method('b')">B</button>
+              <button class="big-btn" onclick="method('n')">N</button>
+              <button class="big-btn" onclick="method('m')">M</button>
+              <button class="big-btn" onclick="method(',')">,</button>
+              <button class="big-btn" onclick="method('.')">.</button>
+              <button class="big-btn" onclick="method('/')">/</button>
+              <button class="shift2-btn" onclick="shift1()">&#8592 Shift</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="big-btn">Ctrl</button>
+              <button class="big-btn">Fn</button>
+              <button class="big-btn" ><i class="fa fa-windows"></i></button>
+              <button class="big-btn">Alt</button>
+              <button class="space-btn" onclick="method(' ')">space</button>
+              <button class="big-btn">Alt</button>
+              <button class="big-btn">Ctrl</button>
+              <button class="big-btn"><</button>
+              <button class="big-btn">&#8963 &#8964</button>
+              <button class="big-btn">></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn1">Home</button>
+              <button class="btn1">End</button>
+              <button class="btn1">PgUp</button>
+              <button class="btn1">PgDn</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="num" onclick="numlck()" id="nmlck">Num</button>
+              <button class="num" onclick="opr('/')">/</button>
+              <button class="num" onclick="opr('*')">*</button>
+              <button class="num" onclick="opr('-')">-</button>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="num" onclick="num(7)">7</button>
+                  <button class="num" onclick="num(8)">8</button>
+                  <button class="num" onclick="num(9)">9</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="num" onclick="num(4)">4</button>
+                  <button class="num" onclick="num(5)">5</button>
+                  <button class="num" onclick="num(6)">6</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="long-btn" onclick="opr('+')">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row g-0">
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="num" onclick="num(1)">1</button>
+                  <button class="num" onclick="num(2)">2</button>
+                  <button class="num" onclick="num(3)">3</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="zero-btn" onclick="num(0)">0</button>
+                  <button class="num" onclick="method('.')">.</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="long-btn" onclick="method('\n')">Enter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="action.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+.container-fluid {
+  background-color: whitesmoke;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.774);
+  border-radius: 10px 10px;
+  border-color: whitesmoke;
+  color: white;
+  cursor: pointer;
+}
+
+.small-btn {
+  height: 40px;
+  width: 90px;
+}
+
+.big-btn {
+  height: 60px;
+  width: 93px;
+}
+
+.backspace-btn {
+  height: 60px;
+  width: 181px;
+}
+
+.smaller-btn {
+  height: 60px;
+  width: 55px;
+}
+
+.tab-btn {
+  height: 60px;
+  width: 140px;
+}
+
+.capslock-btn {
+  width: 165px;
+  height: 60px;
+}
+
+.shift1-btn {
+  height: 60px;
+  width: 196px;
+}
+
+.shift2-btn {
+  height: 60px;
+  width: 230px;
+}
+
+.space-btn {
+  height: 60px;
+  width: 524px;
+  color: transparent;
+}
+
+.btn1 {
+  height: 40px;
+  width: 110px;
+}
+
+.num {
+  width: 110px;
+  height: 60px;
+}
+
+.long-btn {
+  height: 120px;
+  width: 110px;
+}
+
+.zero-btn {
+  height: 60px;
+  width: 222px;
+}
